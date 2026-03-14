@@ -1,0 +1,135 @@
+/* 1. Global Sozlamalar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b0e14;
+  color: #e6edf3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Asosiy konteyner */
+.dashboard {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh; /* Ekranning to'liq bo'yi */
+  background-color: #161b22;
+  border-right: 1px solid #30363d;
+  padding: 20px;
+  z-index: 1000; 
+}
+
+.main-content {
+  margin-left: 250px; /* Sidebar kengligiga teng */
+  width: calc(100% - 250px); /* Qolgan bo'sh joyni to'liq egallaydi */
+  padding: 30px;
+  background-color: #0b0e14;
+  min-height: 100vh;
+}
+
+.main__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #161b22;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.main__table th {
+  color: #8b949e;
+  text-align: left;
+  padding: 18px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #30363d;
+}
+
+.main__table td {
+  padding: 16px;
+  border-bottom: 1px solid #30363d;
+  color: #e6edf3;
+}
+
+/* Jadval qatoriga sichqoncha kelganda */
+.main__table tr:hover {
+  background-color: #1f242e;
+}
+
+/* 6. Tugmalar uchun stili */
+.btn-view {
+  background-color: #238636;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-view:hover {
+  background-color: #2ea043;
+}
+
+.sidebar__logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.sidebar__menu {
+  list-style: none;
+}
+
+.sidebar__menu li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #238636;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar__menu a {
+  text-decoration: none;
+  color: #8b949e;
+  padding: 12px 15px;
+  display: block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.sidebar__menu a:hover {
+  background-color: #282c37;
+  color: #fff;
+}
+
+.sidebar__menu a.active {
+  background-color: #4e73df;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(78, 115, 223, 0.2);
+}
+
+.layout {
+  display: flex;
+  width: 100%;  
+}
