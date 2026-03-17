@@ -1,0 +1,183 @@
+/* Modal foni (Blur effekti) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Qora qoplamali fon */
+  backdrop-filter: blur(8px);
+  /* Blur effekti shu yerda! */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-form label {
+  font-size: 14px;
+  color: #8b949e;
+}
+
+.edit-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.edit-form input:focus {
+  outline: 2px solid #1f6feb;
+}
+
+/* Modal ichki qismi */
+.modal-content {
+  background: #161b22;
+  padding: 30px;
+  border-radius: 16px;
+  width: 400px;
+  border: 1px solid #30363d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #e6edf3;
+  transform: scale(1);
+  animation: scaleUp 0.3s ease;
+}
+
+/* Matn qismlari */
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Tugmalar qismi */
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background-color: #238636;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2ea043;
+}
+
+.delete-btn {
+  background-color: #da3633;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #f85149;
+}
+
+.close-btn {
+  background-color: #30363d;
+  color: #c9d1d9;
+}
+
+.close-btn:hover {
+  background-color: #8b949e;
+  color: #fff;
+}
+
+/* Animatsiyalar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.product-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #00bfff;
+  margin: 15px 0;
+  box-shadow: 0 5px 20px rgba(0, 191, 255, 0.5);
+}
+
+.modal-view {
+  background: #0f0f0f;                   
+  border: 4px solid #00bfff;             
+  box-shadow: 0 15px 40px rgba(0, 191, 255, 0.4);
+  border-radius: 12px;
+}
+
+.modal-view h2 {
+  color: #00bfff;                       
+  text-align: center;
+  font-size: 26px;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+}
+
+.view-text {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 17px;
+  border: 2px solid #00bfff;
+  margin-bottom: 12px;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.85);
+}
+.product-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #00bfff;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 20px rgba(0, 191, 255, 0.5);
+}
+
+/* Agar rasm kichik bo‘lsa markazga qo‘yish uchun */
+.edit-form {
+  text-align: center;
+}

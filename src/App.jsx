@@ -6,12 +6,12 @@ import Products from './components/Products';
 import Users from './components/Users';
 import Cars from './components/Cars';
 import './App.css';
+import Modal from './components/Modal';
 
 function App() {
   return (
     <div className="layout">
       <Sidebar />
-      
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Dashboard />} />
